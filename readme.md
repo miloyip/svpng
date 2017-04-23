@@ -19,16 +19,16 @@ By default, `svpng()` function has the following declaration:
 ~~~c
 /*!
     \brief Save a RGB/RGBA image in PNG format.
-    \param SVPNG_OUTPUT Output stream (by default using file descriptor).
+    \param out Output stream (by default using file descriptor).
     \param w Width of the image. (<16383)
     \param h Height of the image.
     \param img Image pixel data in 24-bit RGB or 32-bit RGBA format.
     \param alpha Whether the image contains alpha channel.
 */
-void svpng(FILE* fp, unsigned w, unsigned h, const unsigned char* img, int alpha);
+void svpng(FILE* out, unsigned w, unsigned h, const unsigned char* img, int alpha);
 ~~~
 
-Basically, you `fopen` a (binary) file for writing, then call this function with the image data. The pixels are packed lienarly from top to bottom, left to right.
+Basically, you `fopen()` a binary file for writing, then call this function with the image data. The pixels are packed lienarly from top to bottom, left to right.
 
 For 24-bit RGB format (with `alpha = 0`), the R, G, B components are stored in `img[(y * w + x) * 3]`, `img[(y * w + x) * 3 + 1]`, `img[(y * w + x) * 3 + 2]` respectively.
 
