@@ -1,4 +1,4 @@
-# svpng
+# svpng v0.1.1
 
 A minimalistic C function for saving RGB/RGBA image into uncompressed PNG.
 
@@ -93,6 +93,6 @@ User can define the following macros before including `svpng.inc`.
 
 | Macro           | Default         | Description |
 |-----------------|-----------------|-------------|
-| `SVPNG_LINKAGE` | (empty)         | Linkage of svpng() function, e.g. `inline`, `static`, `extern "C"`, etc. |
+| `SVPNG_LINKAGE` | (empty)         | Linkage of `svpng()` function, e.g. `inline`, `static`, `extern "C"`, etc. |
 | `SVPNG_OUTPUT`  | `FILE* out`     | Output stream parameter, e.g. `std::ostream& os`, `std::vector<std::uint8_t>& buffer`, etc. |
 | `SVPNG_PUT(u)`  | `fputc(u, out)` | Output a byte into stream, e.g. `os.put(u)`, `buffer.push_back(u)`, etc. |
