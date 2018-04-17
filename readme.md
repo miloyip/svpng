@@ -28,7 +28,7 @@ By default, `svpng()` function has the following declaration:
 void svpng(FILE* out, unsigned w, unsigned h, const unsigned char* img, int alpha);
 ~~~
 
-Basically, you `fopen()` a binary file for writing, then call this function with the image data. The pixels are packed lienarly from top to bottom, left to right.
+Basically, you `fopen()` a binary file for writing, then call this function with the image data. The pixels are packed linearly from top to bottom, left to right.
 
 For 24-bit RGB format (with `alpha = 0`), the R, G, B components are stored in `img[(y * w + x) * 3]`, `img[(y * w + x) * 3 + 1]`, `img[(y * w + x) * 3 + 2]` respectively.
 
